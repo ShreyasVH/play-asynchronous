@@ -1,0 +1,5 @@
+GET 	/ 								controllers.IndexController.index()
+GET		/v2								controllers.IndexController.indexv2()
+GET		/file							controllers.IndexController.file()
+GET		/file/attachment				controllers.IndexController.fileAsAttachment()
+
