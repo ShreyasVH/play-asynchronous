@@ -3,3 +3,4 @@ GET		/v2								controllers.IndexController.indexv2()
 GET		/file							controllers.IndexController.file()
 GET		/file/attachment				controllers.IndexController.fileAsAttachment()
 
+GET		/api			controllers.IndexController.get(input : String)

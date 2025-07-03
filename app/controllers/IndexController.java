@@ -1,6 +1,10 @@
 package controllers;
 
+import play.libs.Json;
 import play.mvc.Result;
+import play.mvc.Results;
+
+import java.util.HashMap;
 import java.util.concurrent.CompletionStage;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -31,5 +35,10 @@ public class IndexController extends BaseController
 	public Result fileAsAttachment()
 	{
 		return ok(new File("/Users/quikr/Desktop/harvard mails/bucket1.html"), false);
+	}
+
+	public CompletionStage<Result> get(String input)
+	{
+		return CompletableFuture.completedFuture(Json.toJson(new HashMap<String, String>(){{put("input", input);}})).thenApplyAsync(Results::ok);
 	}
 }

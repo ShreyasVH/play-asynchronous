@@ -1,8 +1,8 @@
-name := "play-asynchronous-http-programming"
+name := "play-asynchronous"
 
 version := "1.0.0"
 
-scalaVersion := "2.13.0"
+scalaVersion := "2.13.10"
 
 libraryDependencies += guice
 
